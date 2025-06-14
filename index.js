@@ -2,7 +2,9 @@ import express from 'express';
 import cors from 'cors';
 
 const app = express();
-const port = 3000;
+
+// ✅ Use dynamic port for deployment (Render), fallback to 3000 for local dev
+const port = process.env.PORT || 3000;
 
 app.use(cors());
 
